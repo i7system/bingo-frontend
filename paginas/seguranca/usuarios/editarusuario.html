@@ -1,0 +1,196 @@
+<div class="breadcrumb-header justify-content-between mt-4 pl-4 ml-1">
+  <div class="my-auto">
+    <div class="d-flex">
+      <h4 class="content-title mb-0 my-auto">Segurança</h4>
+      <span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Usuarios</span>
+    </div>
+  </div>
+  <div class="d-flex my-xl-auto right-content mr-5">
+   
+  </div>
+</div>
+<div class="row row-sm  ml-3 mr-3" >
+  <div class="col-lg-8 col-xl-8 col-md-8 col-sm-12">
+    <div class="card box-shadow-0">
+      <div class="card-header">
+        <h4 class="card-title mb-1">Editar usuário</h4>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div
+          class="alert alert-outline-warning ml-3  mr-4"
+          role="alert"
+          id="alerta" 
+        >
+          <button
+            aria-label="Close"
+            class="close"
+            data-dismiss="alert"
+            type="button"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong id="textoalerta"></strong>
+        </div>
+        </div>
+      </div>
+
+      <div class="card-body pt-0">
+        <form class="form-horizontal">
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group d-none">
+                <p class="mg-b-10">idusuario</p>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="txt_idusuario"
+                  placeholder=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <p class="mg-b-10">Nome</p>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="txt_nomeusuario"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group">
+                <p class="mg-b-10">Apelido</p>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="txt_apelido"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group">
+                <p class="mg-b-10">Cargo</p>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="txt_cargo"
+                  placeholder=""
+                />
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <p class="mg-b-10">Email</p>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="txt_email"
+                  placeholder="" 
+                />
+              </div>
+               
+            </div>
+            <div class="col-2">
+              <div class="form-group">
+                <p class="mg-b-10">DDD</p>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="txt_ddd"
+                  placeholder="" maxlength="2"
+                />
+              </div>
+            </div>
+            <div class="col-4  ">
+              <div class="form-group">
+                <p class="mg-b-10">Telefone</p>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="txt_telefone"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <p class="mg-b-10">Usuário</p>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="txt_loginusuario"
+                   
+                  />
+                </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <p class="mg-b-10">Senha</p>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="txt_senha"
+                     
+                    />
+                  </div>
+                  </div>
+                </div>
+          
+       
+             
+                
+              
+          
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <p class="mg-b-10">Usuário</p>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="txt_loginusuario"
+                       
+                      />
+                    </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-group">
+                        <p class="mg-b-10">Senha</p>
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="txt_senha"
+                         
+                        />
+                      </div>
+                      </div>
+                    </div>
+
+          <div class="form-group mb-0 mt-3 justify-content-end">
+            <div>
+              <button type="button" class="btn btn-primary" onclick='salvar_usuario();'>
+                Salvar
+              </button>
+              <button type="button" class="btn btn-secondary" onclick='carrega_pagina_div("corpo","paginas/seguranca/usuarios/listausuarios");listausuarios();'>
+                Voltar
+              </button>
+              
+            </div>
+          </div>
+        </form>
+      </d>
+    </div>
+  </div>
+</div>
+</div>

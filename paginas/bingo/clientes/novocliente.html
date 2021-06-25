@@ -1,0 +1,154 @@
+<div class="breadcrumb-header justify-content-between mt-4 pl-4 ml-1">
+  <div class="my-auto">
+    <div class="d-flex">
+      <h4 class="content-title mb-0 my-auto">Bingo</h4>
+      <span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Clientes</span>
+    </div>
+  </div>
+  <div class="d-flex my-xl-auto right-content mr-5">
+
+  </div>
+</div>
+
+<div class="row row-sm  ml-3 mr-3">
+  <div class="col-lg-10 col-xl-10 col-md-10 col-sm-10">
+    <div class="card box-shadow-0">
+      <div class="card-header">
+        <h4 class="card-title mb-1">Novo cliente</h4>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="alert alert-outline-warning ml-3  mr-4" role="alert" id="alerta">
+            <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong id="textoalerta"></strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body pt-0">
+        <form class="form-horizontal">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label>Nome</label>
+                <input class="form-control" placeholder="" type="text" id="txt_nomecliente" required="true" />
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="form-group">
+                <label>DDD</label>
+                <input class="form-control" placeholder="" type="text" id="txt_ddd" required="true" />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label>Telefone</label>
+                <input class="form-control" placeholder="" type="text" id="txt_telefone" required="true" />
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row  ">
+            <div class="col-2">
+              <div class="form-group">
+                <label>Cep</label>
+                <input class="form-control" placeholder="" type="text" id="txt_cep" required="true" />
+
+
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="form-group">
+                <label>Estado</label>
+                <select class="form-control" placeholder="" type="select" id="txt_iduf" required="true"
+                  onchange='listar_cidades()'>
+
+                </select>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group">
+                <label>Cidade</label>
+                <select class="form-control" placeholder="" type="select" id="txt_idcidade" required="true">
+
+                </select>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="form-group">
+                <label>E-mail</label>
+                <input class="form-control" placeholder="" type="email" id="txt_email" required="true" />
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-2">
+              <div class="form-group">
+                <label>Bairro</label>
+                <input class="form-control" placeholder="" type="text" id="txt_bairro" required="true" />
+              </div>
+
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label>Endereço</label>
+                <input class="form-control" placeholder="" type="text" id="txt_endereco" required="true" />
+              </div>
+
+            </div>
+            <div class="col-2">
+              <div class="form-group">
+                <label>Número</label>
+                <input class="form-control" placeholder="" type="text" id="txt_numero" required="true" />
+              </div>
+
+            </div>
+            <div class="col-2">
+              <div class="form-group">
+                <label>Complemento</label>
+                <input class="form-control" placeholder="" type="text" id="txt_complemento" required="true" />
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label>Login</label>
+                <input class="form-control" placeholder="" type="email" id="txt_loginusuario" required="true" />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label>Senha</label>
+                <input class="form-control" placeholder="" type="password" id="txt_senha" required="true" />
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="form-group mb-0 mt-3 justify-content-end">
+            <div>
+              <button type="button" class="btn btn-primary" id="botao_salvar_cliente" onclick='salvar_cliente();'>
+                Salvar
+              </button>
+              <button type="button" class="btn btn-secondary"
+                onclick='carrega_pagina_div("corpo","paginas/bingo/clientes/listaclientes");listaclientes();'>
+                Voltar
+              </button>
+
+            </div>
+          </div>
+        </form>
+        </d>
+      </div>
+    </div>
+  </div>
+</div>

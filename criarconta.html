@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="Description"
+      content="Bootstrap Responsive Admin Web Dashboard HTML5 Template"
+    />
+    <meta name="Author" content="Spruko Technologies Private Limited" />
+    <meta
+      name="Keywords"
+      content="admin,admin dashboard,admin dashboard template,admin panel template,admin template,admin theme,bootstrap 4 admin template,bootstrap 4 dashboard,bootstrap admin,bootstrap admin dashboard,bootstrap admin panel,bootstrap admin template,bootstrap admin theme,bootstrap dashboard,bootstrap form template,bootstrap panel,bootstrap ui kit,dashboard bootstrap 4,dashboard design,dashboard html,dashboard template,dashboard ui kit,envato templates,flat ui,html,html and css templates,html dashboard template,html5,jquery html,premium,premium quality,sidebar bootstrap 4,template admin bootstrap 4"
+    />
+
+    <!-- Title -->
+    <title>Bingo</title>
+
+    <!--- Favicon --->
+    <link
+      rel="icon"
+      href="./assets/img/brand/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!--- Icons css --->
+    <link href="./assets/css/icons.css" rel="stylesheet" />
+
+    <!--- Right-sidemenu css --->
+    <link href="./assets/plugins/sidebar/sidebar.css" rel="stylesheet" />
+    <link href="./assets/plugins/sweet-alert/sweetalert.css" rel="stylesheet" />
+
+    <!--- Custom Scroll bar --->
+    <link
+      href="./assets/plugins/mscrollbar/jquery.mCustomScrollbar.css"
+      rel="stylesheet"
+    />
+
+    <!--- Style css --->
+    <link href="./assets/css/style.css" rel="stylesheet" />
+
+    <!--- Skinmodes css --->
+    <link href="./assets/css/skin-modes.css" rel="stylesheet" />
+
+    <!--- Darktheme css --->
+    <link href="./assets/css/style-dark.css" rel="stylesheet" />
+
+    <!--- Animations css --->
+    <link href="./assets/css/animate.css" rel="stylesheet" />
+  </head>
+  <body class="error-page1 main-body">
+    <!-- Loader -->
+    <div id="global-loader">
+      <img src="./assets/img/loader.svg" class="loader-img" alt="Loader" />
+    </div>
+    <!-- /Loader -->
+
+    <!-- Page -->
+    <div class="page">
+      <div class="container-fluid">
+        <div class="row no-gutter">
+          <!-- The image half -->
+          <div
+            class="
+              col-md-6 col-lg-6 col-xl-7
+              d-none d-md-flex
+              bg-primary-transparent
+            "
+          >
+            <div class="row wd-100p mx-auto text-center">
+              <div
+                class="col-md-12 col-lg-12 col-xl-12 my-auto mx-auto wd-100p"
+              >
+                <img
+                  src="./assets/img/media/login.png"
+                  class="my-auto ht-xl-80p wd-md-100p wd-xl-80p mx-auto"
+                  alt="logo"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- The content half -->
+          <div class="col-md-6 col-lg-6 col-xl-5 bg-white">
+            <div class="login d-flex align-items-center py-2">
+              <!-- Demo content-->
+              <div class="container p-0">
+                <div class="row">
+                  <div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
+                    <div class="card-sigin">
+                      <div class="main-signup-header">
+                        <h2 class="text-primary">Cadastro do cliente</h2>
+
+                        <form action="#">
+                          <div
+                            class="alert alert-outline-warning"
+                            role="alert"
+                            id="alerta"
+                          >
+                            <button
+                              aria-label="Close"
+                              class="close"
+                              data-dismiss="alert"
+                              type="button"
+                            >
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                            <strong id="textoalerta"></strong>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label>Nome</label>
+                                <input
+                                  class="form-control"
+                                  placeholder=""
+                                  type="text"
+                                  id="txt_nomeusuario"
+                                  required="true"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-2">
+                              <div class="form-group">
+                                <label>DDD</label>
+                                <input
+                                  class="form-control"
+                                  placeholder=""
+                                  type="text"
+                                  id="txt_ddd"
+                                  required="true"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="col-10">
+                              <div class="form-group">
+                                <label>Telefone</label>
+                                <input
+                                  class="form-control"
+                                  placeholder=""
+                                  type="text"
+                                  id="txt_telefone"
+                                  required="true"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-2">
+                              <div class="form-group">
+                                <label>Estado</label>
+                                <select
+                                  class="form-control"
+                                  placeholder=""
+                                  type="select"
+                                  id="txt_uf"
+                                  required="true"
+                                >
+                                <option>1</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="form-group">
+                                <label>Cidade</label>
+                                <select
+                                  class="form-control"
+                                  placeholder=""
+                                  type="select"
+                                  id="txt_cidade"
+                                  required="true"
+                                >
+                                <option>1</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="form-group">
+                                <label>Endereço</label>
+                                <input
+                                  class="form-control"
+                                  placeholder=""
+                                  type="text"
+                                  id="txt_endereco"
+                                  required="true"
+                                />
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <div class="row">
+                           
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label>Usuário</label>
+                                <select
+                                  class="form-control"
+                                  placeholder=""
+                                  type="select"
+                                  id="txt_cidade"
+                                  required="true"
+                                >
+                                <option>1</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+
+                          <button
+                            class="btn btn-main-primary btn-block mt-2"
+                            onclick="criar_cliente();"
+                            type="button"
+                          >
+                            Criar conta
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End -->
+            </div>
+          </div>
+          <!-- End -->
+        </div>
+      </div>
+    </div>
+    <!-- End Page -->
+
+    <!--- JQuery min js --->
+    <script src="./assets/plugins/jquery/jquery.min.js"></script>
+
+    <!--- Bootstrap Bundle js --->
+    <script src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!--- Ionicons js --->
+    <script src="./assets/plugins/ionicons/ionicons.js"></script>
+
+    <!--- JQuery sparkline js --->
+    <script src="./assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!--- Moment js --->
+    <script src="./assets/plugins/moment/moment.js"></script>
+
+    <!-- P-scroll js -->
+
+    <!--- Eva-icons js --->
+    <script src="./assets/js/eva-icons.min.js"></script>
+
+    <!--- Rating js --->
+    <script src="./assets/plugins/rating/jquery.rating-stars.js"></script>
+    <script src="./assets/plugins/rating/jquery.barrating.js"></script>
+
+    <!--- Custom js --->
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/bingo.js?20"></script>
+    <script src="./assets/plugins/sweet-alert/sweetalert.min.js"></script>
+    <script src="./assets/plugins/sweet-alert/jquery.sweet-alert.js"></script>
+
+    <script>
+      $("#alerta").hide();
+      criar_cliente();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+
+  <div class="breadcrumb-header justify-content-between mt-3 pl-4 ml-1">
+    <div class="my-auto">
+      <div class="d-flex">
+        <h4 class="content-title mb-0 my-auto">Segurança</h4>
+        <span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Perfis</span>
+      </div>
+    </div>
+   
+    <div class="d-flex my-xl-auto right-content mr-5">
+      <button class="btn btn-success-gradient btn-block" data-effect="effect-scale" data-toggle="modal" href="#modaldemo8" onclick='listausuarios_semperfil();'>Adicionar</button>
+    </div>
+  </div>
+  <div class="row row-sm justify-content-center align-items-center ml-3 mr-3" >
+    <div class="col-xl-12">
+      <div class="card">
+        <div class="card-header pb-0">
+          <div class="d-flex justify-content-between">
+            <h4 class="card-title mg-b-0" id="titulo"></h4>
+            <i class="mdi mdi-dots-horizontal text-gray"></i>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table mg-b-0 text-md-nowrap">
+              <thead>
+                <tr id="tr_usuarios_perfis">
+                  <th style="width: 10%">ID</th>
+                  <th style="width: 40%">NOME</th>
+                  <th style="width: 40%">EMAIL</th>
+                  <th style="width: 10%">AÇÕES</th>
+                </tr>
+              </thead>
+              <tbody id="listausuariosperfis"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modaldemo8">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content modal-content-demo">
+        <div class="modal-header">
+          <h6 class="modal-title">Adicionar usuário </h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <form>
+                <div class="form-group">
+                  <p class="mg-b-10">IDPERFIL</p>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="txt_idperfil"
+                    placeholder=""
+                  />
+                </div>        
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Usuário</label>
+                  <select class="form-control" id="txt_usuariosperfis"></select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn ripple btn-primary" type="button" onclick="salvar_usuarioperfil();">Salvar</button>
+          <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>

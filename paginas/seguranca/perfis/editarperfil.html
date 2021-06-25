@@ -1,0 +1,94 @@
+<div class="breadcrumb-header justify-content-between mt-4 pl-4 ml-1">
+  <div class="my-auto">
+    <div class="d-flex">
+      <h4 class="content-title mb-0 my-auto">Segurança</h4>
+      <span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Perfis</span>
+    </div>
+  </div>
+  <div class="d-flex my-xl-auto right-content mr-5">
+   
+  </div>
+</div>
+<div class="row row-sm  ml-3 mr-3" >
+            <div class="col-lg-8 col-xl-8 col-md-8 col-sm-12">
+              <div class="card box-shadow-0">
+                <div class="card-header">
+                  <h4 class="card-title mb-1">Editar perfil</h4>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div
+                    class="alert alert-outline-warning ml-3  mr-4"
+                    role="alert"
+                    id="alerta"
+                  >
+                    <button
+                      aria-label="Close"
+                      class="close"
+                      data-dismiss="alert"
+                      type="button"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong id="textoalerta"></strong>
+                  </div>
+                  </div>
+                </div>
+
+                <div class="card-body pt-0">
+                  <form class="form-horizontal">
+                    <div class="form-group d-none">
+                      <p class="mg-b-10">Foto</p>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="txt_fotoperfil"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="form-group">
+                      <p class="mg-b-10">Nome</p>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="txt_nomeperfil"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Status</label>
+                      <select class="form-control" id="txt_status">
+                        <option value="0"></option>
+                        <option value="1">Ativo</option>
+                        <option value="2">Inativo</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group d-none">
+                        <p class="mg-b-10">IDPERFIL</p>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="txt_idperfil"
+                          placeholder=""
+                        />
+                      </div>
+
+
+                    <div class="form-group mb-0 mt-3 justify-content-end">
+                      <div>
+                        <button id="botao_salvarperfil" type="button" class="btn btn-primary" onclick='salvar_perfil();'>
+                          Salvar
+                        </button>
+                        <button type="button" class="btn btn-secondary" onclick='carrega_pagina_div("corpo","paginas/seguranca/perfis/listaperfis");listaperfis();'>
+                          Voltar
+                        </button>
+                        
+                      </div>
+                    </div>
+                  </form>
+                </d>
+              </div>
+            </div>
+          </div>
+        </div>
