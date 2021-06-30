@@ -84,7 +84,7 @@ function Requisicao(url_requisicao, json_requisicao, metodo) {
 
   $.ajax({
     type: metodo,
-    url: url_globlal+url_serverside + url_requisicao,
+    url: url_globlal+url_serverside+url_requisicao,
     headers: {
       Authorization: "Bearer " + token.accessToken,
     },
@@ -112,7 +112,7 @@ function validar_loginusuario(loginusuario,tipo,idusuario) {
 
   $.ajax({
     type: "POST",
-    url: url + "ValidarLoginUsuario",
+    url: url_globlal+url_serverside + "ValidarLoginUsuario",
     contentType: "application/json",
     data: JSON.stringify(JsonEmail),
     async: false,
@@ -634,24 +634,30 @@ function sec_perfis() {
 }
 
 
-var pagina;
-var inicio_paginabotao;
-var classes;
-function listaperfis() {
+function listaperfis(param) {
    pagina = 0;
    inicio_paginabotao = 0;
    classes = new Array();
-   paginativa(pagina);
-  paginacaoperfis();
+   if(param){
+    pagina = param;
+   }else{
+     pagina = pagina;
+   }
+   paginacao_perfis(pagina);
  
 }
 
-function paginacaoperfis(){
+function paginacao_perfis(param,qtde_param){
+  var quantidade = parseInt($("#paginacao_quantidade").val());
+  
 
-  var paginacao = {"PAGINA":pagina,"TAMANHO":5};
+  paginacao_paginativa(param);
+
+  var paginacao = {"PAGINA":pagina,"TAMANHO":quantidade};
   var SecPerfis = Requisicao("SecPerfis", paginacao, "POST");
   var listaperfil = SecPerfis.lista;
-
+  var registros = SecPerfis.quantidade;
+  console.log(SecPerfis);
 
   var funcaoeditarperfil =
     "carrega_pagina_div('corpo','paginas/seguranca/perfis/editarperfil');editar_perfil(this);";
@@ -701,73 +707,12 @@ function paginacaoperfis(){
     }
 
     
-    Paginacao(SecPerfis.qtde);
+    paginacao_orelhas(SecPerfis.total,quantidade,registros);
     
 }
 
 
-function Paginacao(qtde){
-  var paginas = '';
-  var texto;
 
-  var conta = qtde / 5;
-
-  for(var i = inicio_paginabotao;i<conta;i++){
-    classes.push("");
-    var texto = i+1;
-    var idpagina = "pagina"+i;
-    paginas = paginas +'<li class="page-item'+classes[i]+'" id="'+idpagina+'" onclick="paginativa('+i+');paginacaoperfis('+i+');"><a class="page-link" href="#">'+texto+'</a></li>';
-    if(i>inicio_paginabotao+2){
-    break;
-    }
-    $("#numerospagina").html(paginas);
-    if(i==conta-1){
-      $('#'+idpagina).addClass("disabled");
-      $('#'+idpagina).prop("onclick",null);
-      $("#proximo").prop("onclick",null);
-      $("#proximo").addClass("disabled");
-    }else{
-      $("#proximo").removeClass("disabled");
-
-    }
-
-    if(i==0){
-      $("#anterior").prop("onclick",null);
-      $("#anterior").addClass("disabled");
-    }else if(i>2){
-      $("#anterior").removeClass("disabled");
-    }
-  
-  }
-
-
-}
-
-function paginativa(parametro){
-  if(parametro == '>' ){
-    pagina++;
-  }else if(parametro == '<'){
-    pagina--;
-  }else{
-    pagina = parametro;
-  }
- 
-  
-  
- 
-  classes[pagina] = " active";
-  classes[pagina-1] ="";
-  classes[pagina-2] ="";
-  classes[pagina+1] = "";
-  classes[pagina+2] = "";
-
-  if(pagina>inicio_paginabotao+1){
-    inicio_paginabotao = inicio_paginabotao+2;
-  }else if(pagina <= inicio_paginabotao && pagina != 0){
-    inicio_paginabotao = inicio_paginabotao-2;
-  }
-  
-}
 
 function novoperfil() {
   $("#alerta").hide();
@@ -894,7 +839,7 @@ function listar_ufs(){
 
   $.ajax({
     type: 'GET',
-    url: url + "SecUfs",
+    url: url_globlal+url_serverside + "SecUfs",
     contentType: "application/json",
     async: false,
     success: function (data, status, xhr) {

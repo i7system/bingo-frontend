@@ -20,27 +20,46 @@
           </div>
         </div>
         <div class="card-body">
-          <div class="table-responsive">
-            <table class="table mg-b-0 text-md-nowrap">
-              <thead>
-                <tr id="tr_perfis">
-                  <th style="width: 10%">ID</th>
-                  <th style="width: 60%">NOME</th>
-                  <th style="width: 15%">STATUS</th>
-                  <th style="width: 15%">AÇÕES</th>
-                </tr>
-              </thead>
-              <tbody id="listaperfis"></tbody>
-             
-            </table>
+          <div class="row p-0 m-0"  >
+            <div class="col-2" >
+              <div class="form-group w-50 p-0 m-0 "  >
+               
+                <select class="form-control " id="paginacao_quantidade"  style="height: 20%;" onchange="listaperfis(0);$('.pagina_proximo').attr('disabled',false);">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+          <div class="row p-0 m-0 pt-2"  >
+            <div class="col-12">
+              <div class="table-responsive">
+                <table class="table mg-b-0 text-md-nowrap">
+                  <thead>
+                    <tr id="tr_perfis">
+                      <th style="width: 10%">ID</th>
+                      <th style="width: 60%">NOME</th>
+                      <th style="width: 15%">STATUS</th>
+                      <th style="width: 15%">AÇÕES</th>
+                    </tr>
+                  </thead>
+                  <tbody id="listaperfis"></tbody>
+                 
+                </table>
+              </div>
+            </div>
+
           </div>
          <div class="w-100  d-flex p-0 m-0">
           <div class="w-75 "></div>
           <div class="w-25 ml-5 pl-5 p-0 m-0 mt-1">
             <ul class="pagination p-0 m-0">
-              <li class="page-item" id="anterior"><a class="page-link" href="#" onclick="paginativa('<');paginacaoperfis('<');"><i class="icon ion-ios-arrow-back"></i></a></li>
+              <li class="page-item" id="pagina_anterior"><button class="page-link pagina_anterior" href="#" onclick="paginacao_perfis('<');"><i class="icon ion-ios-arrow-back"></i></button></li>
               <div class="d-flex" id="numerospagina"></div>
-              <li class="page-item" id="proximo"><a class="page-link" href="#" onclick="paginativa('>');paginacaoperfis('>');"><i class="icon ion-ios-arrow-forward"></i></a></li>
+              <li class="page-item" id="pagina_proximo"><button class="page-link pagina_proximo" href="#" onclick="paginacao_perfis('>');"><i class="icon ion-ios-arrow-forward"></i></button></li>
             </ul>
           
           </div>

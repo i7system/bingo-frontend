@@ -1,4 +1,4 @@
-var url_globlal = "http://192.168.0.119";
+var url_globlal = "http://localhost";
 
 var url_clientside = ":3000/";
 
