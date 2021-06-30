@@ -55,6 +55,8 @@ function paginacao_orelhas(total_registros,quantos_registros,qtde_registros){
       }else{
         $(".pagina_proximo").attr('disabled',false);
       }
+    }else{
+      $(".pagina_proximo").attr('disabled',false);
     }
 
     if(pagina == 0){
